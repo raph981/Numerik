@@ -355,3 +355,80 @@ details > summary { cursor: pointer; font-family: var(--font-ui); font-weight: 6
 .series-4 { --series-color: var(--series-4); }
 .series-5 { --series-color: var(--series-5); }
 .series-6 { --series-color: var(--series-6); }
+
+/* 7. Koordinatenebene (core/plane.js) ------------------------------------ */
+.plane { width: 100%; max-width: 420px; height: auto; display: block; margin: 0 auto; background: var(--bg); border-radius: 8px; border: 1px solid var(--border); }
+.plane__grid line { stroke: var(--border); stroke-width: 1; }
+.plane__axis { stroke: var(--text-muted); stroke-width: 1.2; }
+.plane__curve { fill: none; stroke: var(--series-color); stroke-width: 2.2; stroke-linejoin: round; }
+.plane__curve--fill { fill: color-mix(in srgb, var(--series-color) 14%, transparent); }
+.plane__curve--dashed { stroke-dasharray: 5 4; stroke-width: 1.5; }
+.plane__arrow { stroke: var(--series-color); stroke-width: 2.5; }
+.plane__dot { fill: var(--series-color); stroke: var(--surface); stroke-width: 1.5; }
+.plane__label { fill: var(--series-color, var(--text)); font-family: var(--font-ui); font-size: 13px; font-weight: 600; }
+
+.widget-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+@media (max-width: 700px) { .widget-columns { grid-template-columns: minmax(0, 1fr); } }
+
+/* Matrizen in Widgets */
+.matrix { display: inline-grid; gap: 2px 10px; padding: 4px 10px; border-left: 2px solid var(--text-muted); border-right: 2px solid var(--text-muted); border-radius: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-variant-numeric: tabular-nums; vertical-align: middle; }
+.matrix__cell { text-align: right; min-width: 2.2em; padding: 1px 3px; border-radius: 4px; }
+.matrix__cell--pivot { outline: 2px solid var(--box-merke); font-weight: 700; }
+.matrix__cell--changed { background: color-mix(in srgb, var(--series-2) 22%, transparent); }
+.matrix__cell--zeroed { color: var(--text-muted); }
+.matrix__cell--rhs { border-left: 1px dashed var(--text-muted); padding-left: 8px; }
+.matrix__cell--muted { color: var(--text-muted); }
+.matrix-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: 0.5rem 0; font-family: var(--font-ui); }
+.matrix-input { display: inline-grid; gap: 4px; width: max-content; }
+.matrix-input input { width: 4.2em; font: inherit; font-family: var(--font-mono); font-size: 0.85rem; padding: 0.25rem 0.35rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text); text-align: right; }
+
+.button {
+  font: inherit; font-size: 0.85rem; font-weight: 600; padding: 0.45rem 0.9rem; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--surface);
+}
+.button--secondary { background: var(--bg); color: var(--accent); }
+.button:disabled { opacity: 0.4; cursor: default; }
+.button-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.5rem 0 1rem; }
+.step-log { background: var(--surface-2); border-radius: 8px; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; }
+.step-log p { margin: 0.25rem 0; }
+
+/* Heatmap */
+.heatmap { width: 100%; max-width: 420px; height: auto; display: block; margin: 0 auto; border-radius: 8px; border: 1px solid var(--border); touch-action: none; cursor: crosshair; }
+.heatmap__legend { display: flex; align-items: center; gap: 0.5rem; justify-content: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; }
+.heatmap__bar { width: 160px; height: 10px; border-radius: 4px; background: linear-gradient(90deg, var(--heat-0), var(--heat-1), var(--heat-2)); }
+:root { --heat-0: #e8f4ee; --heat-1: #f5c66b; --heat-2: #c8352b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --heat-0: #1d3a2e; --heat-1: #a8792a; --heat-2: #e0534a; } }
+
+/* Netzwerk */
+.network { width: 100%; max-width: 520px; height: auto; display: block; margin: 0 auto; }
+.network__node { stroke: var(--text); stroke-width: 1.5; }
+.network__node-label { font-family: var(--font-ui); font-size: 13px; font-weight: 700; fill: var(--text); }
+.network__value { font-family: var(--font-ui); font-size: 11px; fill: var(--text-muted); }
+.network__edge { stroke: var(--series-3); fill: none; }
+.network__edge--pump { stroke: var(--series-5); stroke-dasharray: 6 4; }
+.network__edge-label { font-family: var(--font-ui); font-size: 12px; font-weight: 600; fill: var(--text); }
+.network__flow { fill: var(--series-3); }
+.network__flow--pump { fill: var(--series-5); }
+.network__node-label--inside { font-size: 12px; fill: #fff; }
+.network__flowline { stroke: var(--series-3); stroke-dasharray: 3 9; stroke-linecap: round; fill: none; animation: network-flow 1.5s linear infinite; }
+.network__flowline--pump { stroke: var(--series-5); }
+@keyframes network-flow { to { stroke-dashoffset: -24; } }
+@media (prefers-reduced-motion: reduce) { .network__flowline { animation: none; } }
+.network__controls { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.4rem 1rem; }
+.network__controls .control { min-width: 0; }
+
+/* Auslöschung */
+.cancel { background: var(--surface-2); border-radius: 8px; padding: 0.6rem 0.9rem; }
+.cancel__row { display: flex; justify-content: space-between; gap: 1rem; }
+.cancel__row:last-child { border-top: 1px solid var(--text-muted); margin-top: 2px; padding-top: 2px; }
+.cancel__label { color: var(--text-muted); }
+.cancel__digits { white-space: pre; font-size: 1rem; }
+.digits-bad-strong { color: var(--bad); font-weight: 700; }
+
+/* Fehleraufspaltung (VL 3) */
+.split-diagram { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem; margin: 1rem 0; font-family: var(--font-ui); font-size: 0.85rem; }
+.split-diagram__node { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.4rem 0.8rem; }
+.split-diagram__arrow { color: var(--text-muted); }
+
+/* Navigation: nur die Abschnitte der aktiven Vorlesung ausklappen */
+.nav__group:not(.is-active) .nav__sections { display: none; }

@@ -13,6 +13,7 @@ const OPTIONS = {
     '\\N': '\\mathbb{N}',
     '\\Z': '\\mathbb{Z}',
     '\\C': '\\mathbb{C}',
+    '\\K': '\\mathbb{K}',
     '\\F': '\\mathbb{F}',
     '\\rd': '\\operatorname{rd}',
     '\\eps': '\\mathrm{eps}',

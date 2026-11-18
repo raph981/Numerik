@@ -20,17 +20,17 @@
  */
 import vl01 from './vl01.js';
 import vl02 from './vl02.js';
+import vl03 from './vl03.js';
+import vl04 from './vl04.js';
+import vl05 from './vl05.js';
+import vl06 from './vl06.js';
+import vl07 from './vl07.js';
 
 /** @type {Lecture[]} */
-export const LECTURES = [vl01, vl02];
+export const LECTURES = [vl01, vl02, vl03, vl04, vl05, vl06, vl07];
 
 /** Noch nicht aufbereitete Kapitel des Skripts (in Reihenfolge). */
 export const PLANNED_CHAPTERS = [
-  'Rechnen mit Fließkommazahlen',
-  'Analyse von Netzwerken',
-  'Einige Grundlagen aus der linearen Algebra',
-  'Konditionsanalyse für lineare Gleichungssysteme',
-  'Eliminationsverfahren',
   'LU-Zerlegung',
   'Rundungsfehleranalyse der LU-Zerlegung',
   'Spezielle Gleichungssysteme',

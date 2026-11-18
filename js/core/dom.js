@@ -129,3 +129,50 @@ export function fmt(x, digits = 4) {
   if (abs !== 0 && (abs < 1e-3 || abs >= 1e7)) return fmtExp(x, digits - 1);
   return x.toLocaleString('de-DE', { maximumFractionDigits: digits });
 }
+
+/* ---------- Matrizen ---------- */
+
+/**
+ * Darstellung einer Matrix.
+ * @param {number[][]} M
+ * @param {{format?: (v:number)=>string, cellClass?: (i:number, j:number)=>string, rhs?: boolean}} [options]
+ *        rhs: letzte Spalte als rechte Seite abtrennen
+ */
+export function matrixView(M, { format = (v) => fmt(v, 3), cellClass = () => '', rhs = false } = {}) {
+  const cols = M[0].length;
+  return h('div', { class: 'matrix', style: `grid-template-columns: repeat(${cols}, auto)` },
+    M.flatMap((row, i) => row.map((v, j) => h('span', {
+      class: `matrix__cell ${rhs && j === cols - 1 ? 'matrix__cell--rhs ' : ''}${cellClass(i, j)}`,
+    }, format(v)))));
+}
+
+/**
+ * Eingabefelder für eine Matrix; ruft onChange(M) bei jeder gültigen Änderung auf.
+ * @returns {{element: HTMLElement, set: (M:number[][]) => void}}
+ */
+export function matrixInput(M, onChange) {
+  let current = M.map((row) => [...row]);
+  const inputs = current.map((row, i) => row.map((v, j) => {
+    const input = h('input', { type: 'text', inputmode: 'decimal', value: String(v), 'aria-label': `Eintrag (${i + 1}, ${j + 1})` });
+    input.addEventListener('input', () => {
+      const parsed = Number(input.value.replace(',', '.').replace('−', '-'));
+      if (input.value.trim() === '' || !Number.isFinite(parsed)) return;
+      current[i][j] = parsed;
+      onChange(current.map((r) => [...r]));
+    });
+    return input;
+  }));
+  const element = h('div', { class: 'matrix-input', style: `grid-template-columns: repeat(${M[0].length}, auto)` }, inputs.flat());
+  return {
+    element,
+    set(next) {
+      current = next.map((row) => [...row]);
+      current.forEach((row, i) => row.forEach((v, j) => { inputs[i][j].value = String(v); }));
+    },
+  };
+}
+
+/** Schaltfläche. */
+export function button(label, onClick, { secondary = false } = {}) {
+  return h('button', { type: 'button', class: `button${secondary ? ' button--secondary' : ''}`, onclick: onClick }, label);
+}
