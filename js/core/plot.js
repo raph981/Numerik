@@ -54,9 +54,12 @@ export function linearTicks(min, max, count = 6) {
 }
 
 /** Zehnerpotenzen als Ticks für eine logarithmische Achse. */
-export function logTicks(min, max) {
+export function logTicks(min, max, maxCount = 8) {
+  const lo = Math.ceil(Math.log10(min));
+  const hi = Math.floor(Math.log10(max));
+  const stride = Math.max(1, Math.ceil((hi - lo + 1) / maxCount)); // bei vielen Dekaden ausdünnen
   const ticks = [];
-  for (let p = Math.ceil(Math.log10(min)); p <= Math.floor(Math.log10(max)); p++) ticks.push(10 ** p);
+  for (let p = lo; p <= hi; p++) if ((p - lo) % stride === 0) ticks.push(10 ** p);
   return ticks;
 }
 

@@ -22,6 +22,10 @@ Aktuell aufbereitet:
 | 12 – QR-Zerlegung | Householder-Spiegelungen, volle QR-Zerlegung, Implementierung, Anwendungen | Householder-Spiegelung in 2D, Householder-QR Schritt für Schritt |
 | 13 – Iterative Verfahren | Fill-in, dünn besetzte Matrizen, Richardson/Jacobi/Gauß-Seidel, Schur-Form, Konvergenzsatz | Iterationspfade in der Ebene mit Spektralradius, Fill-in bei Pfeilmatrizen |
 | 14 – Iterative Verfahren II | Konvergenzrate bei SPD, Vorkonditionierung, Gerschgorin, Energienorm, Abbruch, Aufwand | Gerschgorin-Kreise, Konvergenzraten am Poissonproblem (Prognose vs. Beobachtung) |
+| 15 – Nichtlineare Gleichungen | Fixpunktform, Kontraktion, Banach’scher Fixpunktsatz, a-priori-/a-posteriori-Schranken | Spinnweb-Diagramm für drei Fixpunktformen, Relaxation für Kreis ∩ Ellipse mit Fehlerkreis |
+| 16 – Newton-Verfahren | Jacobimatrix, Kontraktion über Ableitungen, Relaxation als Richardson, quadratische Konvergenz | Newton-Tangenten mit Stellenverdopplung, Newton in 2D, Einzugsgebiete |
+| 17 – Polynominterpolation | Vandermonde, Lagrange-Basis, Newton-Basis, dividierte Differenzen, Neville | Lagrange-Basis interaktiv, Tableaus der dividierten Differenzen und des Neville-Schemas |
+| 18 – Interpolationsfehler und numerische Differentiation | Fehlerformel, Runge-Phänomen, Horner, Differenzenquotienten | Runge vs. Tschebyscheff, Fehler der Differenzenquotienten (Beispiel 18.6) |
 
 ## Starten
 
@@ -45,8 +49,8 @@ npm test
 
 Die Tests prüfen u. a., dass die Tabellen aus Beispiel 2.1, die Mengen aus Beispiel 2.3, die Rundungen
 aus Beispiel 2.5, die Schranken aus Lemma 2.7, die Konditionszahl aus Beispiel 6.3 und die Elimination aus
-Beispiel 7.4, die Konditionszahlen aus Beispiel 8.6 und das Rechnen in F(10, 4) aus Beispiel 9.8 exakt reproduziert
-werden.
+Beispiel 7.4, die Konditionszahlen aus Beispiel 8.6 und das Rechnen in F(10, 4) aus Beispiel 9.8 sowie die Iterationszahlen aus
+den Beispielen 16.1/16.10 exakt reproduziert werden.
 
 ## Aufbau
 

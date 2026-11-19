@@ -59,4 +59,16 @@ export const WIDGETS = {
   'iteration-2d': () => import('./iteration-2d.js'),
   'convergence-rate': () => import('./convergence-rate.js'),
   'gerschgorin': () => import('./gerschgorin.js'),
+  // Vorlesung 15
+  'fixed-point-1d': () => import('./fixed-point-1d.js'),
+  'nonlinear-2d': () => import('./nonlinear-2d.js'),
+  // Vorlesung 16
+  'newton-1d': () => import('./newton-1d.js'),
+  'newton-basins': () => import('./newton-basins.js'),
+  // Vorlesung 17
+  'lagrange-basis': () => import('./lagrange-basis.js'),
+  'newton-interpolation': () => import('./newton-interpolation.js'),
+  // Vorlesung 18
+  'interpolation-error': () => import('./interpolation-error.js'),
+  'numerical-diff': () => import('./numerical-diff.js'),
 };

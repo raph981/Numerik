@@ -32,19 +32,20 @@ import vl11 from './vl11.js';
 import vl12 from './vl12.js';
 import vl13 from './vl13.js';
 import vl14 from './vl14.js';
+import vl15 from './vl15.js';
+import vl16 from './vl16.js';
+import vl17 from './vl17.js';
+import vl18 from './vl18.js';
 
 /** @type {Lecture[]} */
 export const LECTURES = [
   vl01, vl02, vl03, vl04, vl05, vl06, vl07,
   vl08, vl09, vl10, vl11, vl12, vl13, vl14,
+  vl15, vl16, vl17, vl18,
 ];
 
 /** Noch nicht aufbereitete Kapitel des Skripts (in Reihenfolge). */
 export const PLANNED_CHAPTERS = [
-  'Lösung nichtlinearer algebraischer Gleichungen',
-  'Newton-Verfahren',
-  'Polynominterpolation',
-  'Interpolationsfehler und numerische Differentiation',
   'Extrapolation zum Limes',
   'Trigonometrische Interpolation',
   'Interpolation mit Splines',
