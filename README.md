@@ -26,6 +26,10 @@ Aktuell aufbereitet:
 | 16 – Newton-Verfahren | Jacobimatrix, Kontraktion über Ableitungen, Relaxation als Richardson, quadratische Konvergenz | Newton-Tangenten mit Stellenverdopplung, Newton in 2D, Einzugsgebiete |
 | 17 – Polynominterpolation | Vandermonde, Lagrange-Basis, Newton-Basis, dividierte Differenzen, Neville | Lagrange-Basis interaktiv, Tableaus der dividierten Differenzen und des Neville-Schemas |
 | 18 – Interpolationsfehler und numerische Differentiation | Fehlerformel, Runge-Phänomen, Horner, Differenzenquotienten | Runge vs. Tschebyscheff, Fehler der Differenzenquotienten (Beispiel 18.6) |
+| 19 – Extrapolation zum Limes | Extrapolationsmethode, Elimination von Taylortermen, gerade Entwicklungen | Extrapolation mit Neville-Tableau bei h = 0 (in h oder h²) |
+| 20 – Trigonometrische Interpolation | Einheitswurzeln, DFT, reelle Koeffizienten, Gibbs-Phänomen, FFT, Spektralanalyse | Einheitswurzeln, trigonometrische Interpolation mit Spektrum, FFT-Schmetterling mit Laufzeitmessung, Tiefpassfilter |
+| 21 – Splines | Spline-Räume, kubische Splines (tridiagonales System), Fehler und Konvergenzordnung | Polynom vs. lineare/kubische Splines (Beispiel 21.5), Konvergenzordnungen (Beispiel 21.7) |
+| 22 – Bernstein-Polynome und Bézier-Kurven | Bernstein-Basis, Approximationssatz, Bézier-Kurven, konvexe Hülle, de Casteljau | Bernstein-Basis und -Approximation, Bézier-Editor mit de-Casteljau-Konstruktion |
 
 ## Starten
 

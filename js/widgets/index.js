@@ -71,4 +71,17 @@ export const WIDGETS = {
   // Vorlesung 18
   'interpolation-error': () => import('./interpolation-error.js'),
   'numerical-diff': () => import('./numerical-diff.js'),
+  // Vorlesung 19
+  'extrapolation': () => import('./extrapolation.js'),
+  // Vorlesung 20
+  'roots-of-unity': () => import('./roots-of-unity.js'),
+  'trig-interpolation': () => import('./trig-interpolation.js'),
+  'fft-butterfly': () => import('./fft-butterfly.js'),
+  'spectral-analysis': () => import('./spectral-analysis.js'),
+  // Vorlesung 21
+  'splines': () => import('./splines.js'),
+  'spline-convergence': () => import('./spline-convergence.js'),
+  // Vorlesung 22
+  'bernstein': () => import('./bernstein.js'),
+  'bezier': () => import('./bezier.js'),
 };

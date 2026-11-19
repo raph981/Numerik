@@ -445,3 +445,12 @@ details > summary { cursor: pointer; font-family: var(--font-ui); font-weight: 6
 .basins { width: 100%; max-width: 600px; height: auto; display: block; margin: 0.5rem auto; border-radius: 8px; border: 1px solid var(--border); image-rendering: pixelated; }
 .tableau td { font-family: var(--font-mono); font-size: 0.82rem; }
 .tableau__top { font-weight: 700; color: var(--accent); }
+
+/* FFT-Schmetterling (VL 20) und Checkboxen */
+.butterfly { width: 100%; max-width: 640px; height: auto; display: block; margin: 0.5rem auto; }
+.butterfly__line { stroke: var(--series-3); stroke-width: 1.4; }
+.butterfly__cross { stroke: var(--series-5); stroke-width: 1; opacity: 0.7; }
+.butterfly__node { fill: var(--surface); stroke: var(--text); stroke-width: 1.2; }
+.butterfly__label { font-family: var(--font-mono); font-size: 11px; fill: var(--text-muted); }
+.checkbox { display: inline-flex; align-items: center; gap: 0.2rem; font-size: 0.85rem; color: var(--text); margin-right: 0.5rem; }
+.checkbox input { accent-color: var(--accent); }

@@ -36,20 +36,21 @@ import vl15 from './vl15.js';
 import vl16 from './vl16.js';
 import vl17 from './vl17.js';
 import vl18 from './vl18.js';
+import vl19 from './vl19.js';
+import vl20 from './vl20.js';
+import vl21 from './vl21.js';
+import vl22 from './vl22.js';
 
 /** @type {Lecture[]} */
 export const LECTURES = [
   vl01, vl02, vl03, vl04, vl05, vl06, vl07,
   vl08, vl09, vl10, vl11, vl12, vl13, vl14,
   vl15, vl16, vl17, vl18,
+  vl19, vl20, vl21, vl22,
 ];
 
 /** Noch nicht aufbereitete Kapitel des Skripts (in Reihenfolge). */
 export const PLANNED_CHAPTERS = [
-  'Extrapolation zum Limes',
-  'Trigonometrische Interpolation',
-  'Interpolation mit Splines',
-  'Kurvendarstellung mit Bernstein-Polynomen',
   'Approximation in Skalarprodukträumen',
   'Adaptive Approximation mit Haar-Wavelets',
   'Numerische Integration niedriger Ordnung',
