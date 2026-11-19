@@ -15,6 +15,13 @@ Aktuell aufbereitet:
 | 5 – Grundlagen der linearen Algebra | Vektor- und Matrixnormen, Normäquivalenz, Eigenwerte, Spektralradius, Skalarprodukt, Spektralnorm, positiv definite Matrizen | Einheitskugeln der p-Normen, Matrix als Abbildung des Einheitskreises, quadratische Formen |
 | 6 – Kondition linearer Gleichungssysteme | Konditionszahl, Spektralkondition, Kondition vs. Determinante, Neumann-Lemma, Störungssatz | Geometrische Kondition: Geradenschnitt mit gestörten Lösungen, Schranke (6.4) vs. Beobachtung |
 | 7 – Eliminationsverfahren | Rückwärtseinsetzen, Gauß-Elimination, Aufwand ⅔n³, Permutations- und Frobeniusmatrizen | Gauß-Elimination Schritt für Schritt (inkl. Pivotisierung und Matrixform), Aufwandsrechner |
+| 8 – LU-Zerlegung | PAQ = LU, Voll-/Spaltenpivotisierung, kompakte Speicherung, Integralgleichungen (Kollokation) | LU-Zerlegung mit drei Pivotstrategien und Lösen per Vorwärts-/Rückwärtseinsetzen, Integralgleichung mit Kondition und Fehler in double/float |
+| 9 – Rundungsfehleranalyse der LU-Zerlegung | Rückwärtsanalyse, Skalarprodukt, Dreieckssysteme, Sätze 9.3/9.4, Pivotisierung und Wachstumsfaktor | Skalarproduktfehler vs. n·eps, Wachstumsfaktor (Wilkinson-Matrix), Beispiel 9.8 in F(10, r) |
+| 10 – Spezielle Gleichungssysteme | SPD-Matrizen, Cholesky, Diagonaldominanz, Bandmatrizen | Cholesky Schritt für Schritt, Besetzungsmuster und Fill-in |
+| 11 – Nichtreguläre Systeme | Kleinste Quadrate, Normalengleichung, Gram-Schmidt, schmale QR-Zerlegung | Ausgleichsrechnung (Normalengleichung vs. QR), Gram-Schmidt geometrisch, klassisch vs. modifiziert |
+| 12 – QR-Zerlegung | Householder-Spiegelungen, volle QR-Zerlegung, Implementierung, Anwendungen | Householder-Spiegelung in 2D, Householder-QR Schritt für Schritt |
+| 13 – Iterative Verfahren | Fill-in, dünn besetzte Matrizen, Richardson/Jacobi/Gauß-Seidel, Schur-Form, Konvergenzsatz | Iterationspfade in der Ebene mit Spektralradius, Fill-in bei Pfeilmatrizen |
+| 14 – Iterative Verfahren II | Konvergenzrate bei SPD, Vorkonditionierung, Gerschgorin, Energienorm, Abbruch, Aufwand | Gerschgorin-Kreise, Konvergenzraten am Poissonproblem (Prognose vs. Beobachtung) |
 
 ## Starten
 
@@ -38,7 +45,8 @@ npm test
 
 Die Tests prüfen u. a., dass die Tabellen aus Beispiel 2.1, die Mengen aus Beispiel 2.3, die Rundungen
 aus Beispiel 2.5, die Schranken aus Lemma 2.7, die Konditionszahl aus Beispiel 6.3 und die Elimination aus
-Beispiel 7.4 exakt reproduziert werden.
+Beispiel 7.4, die Konditionszahlen aus Beispiel 8.6 und das Rechnen in F(10, 4) aus Beispiel 9.8 exakt reproduziert
+werden.
 
 ## Aufbau
 

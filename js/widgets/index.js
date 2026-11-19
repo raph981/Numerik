@@ -38,4 +38,25 @@ export const WIDGETS = {
   // Vorlesung 7
   'gauss-stepper': () => import('./gauss-stepper.js'),
   'complexity': () => import('./complexity.js'),
+  // Vorlesung 8
+  'lu-decomposition': () => import('./lu-decomposition.js'),
+  'integral-equation': () => import('./integral-equation.js'),
+  // Vorlesung 9
+  'pivoting-example': () => import('./pivoting-example.js'),
+  'dot-product-error': () => import('./dot-product-error.js'),
+  'growth-factor': () => import('./growth-factor.js'),
+  // Vorlesung 10
+  'cholesky': () => import('./cholesky.js'),
+  'sparsity-fill': () => import('./sparsity-fill.js'),
+  // Vorlesung 11
+  'least-squares-fit': () => import('./least-squares-fit.js'),
+  'gram-schmidt-geometry': () => import('./gram-schmidt-geometry.js'),
+  'gram-schmidt-stability': () => import('./gram-schmidt-stability.js'),
+  // Vorlesung 12
+  'householder': () => import('./householder.js'),
+  'householder-qr': () => import('./householder-qr.js'),
+  // Vorlesungen 13 und 14
+  'iteration-2d': () => import('./iteration-2d.js'),
+  'convergence-rate': () => import('./convergence-rate.js'),
+  'gerschgorin': () => import('./gerschgorin.js'),
 };

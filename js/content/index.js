@@ -25,19 +25,22 @@ import vl04 from './vl04.js';
 import vl05 from './vl05.js';
 import vl06 from './vl06.js';
 import vl07 from './vl07.js';
+import vl08 from './vl08.js';
+import vl09 from './vl09.js';
+import vl10 from './vl10.js';
+import vl11 from './vl11.js';
+import vl12 from './vl12.js';
+import vl13 from './vl13.js';
+import vl14 from './vl14.js';
 
 /** @type {Lecture[]} */
-export const LECTURES = [vl01, vl02, vl03, vl04, vl05, vl06, vl07];
+export const LECTURES = [
+  vl01, vl02, vl03, vl04, vl05, vl06, vl07,
+  vl08, vl09, vl10, vl11, vl12, vl13, vl14,
+];
 
 /** Noch nicht aufbereitete Kapitel des Skripts (in Reihenfolge). */
 export const PLANNED_CHAPTERS = [
-  'LU-Zerlegung',
-  'Rundungsfehleranalyse der LU-Zerlegung',
-  'Spezielle Gleichungssysteme',
-  'Nichtreguläre Systeme',
-  'QR-Zerlegung',
-  'Iterative Lösung linearer Gleichungssysteme',
-  'Iterative Lösung linearer Gleichungssysteme II',
   'Lösung nichtlinearer algebraischer Gleichungen',
   'Newton-Verfahren',
   'Polynominterpolation',

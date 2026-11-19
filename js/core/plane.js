@@ -85,6 +85,15 @@ export function createPlane({ range = 2, center = [0, 0], size = 360, ariaLabel 
       return node;
     },
 
+    /** Kreis um center mit Radius r (Weltkoordinaten). */
+    circle(center, r, className = 'series-1', options = {}) {
+      const pts = Array.from({ length: 121 }, (_, k) => {
+        const t = (2 * Math.PI * k) / 120;
+        return [center[0] + r * Math.cos(t), center[1] + r * Math.sin(t)];
+      });
+      return api.path(pts, className, { closed: true, ...options });
+    },
+
     /** Punkt. */
     dot([x, y], className = 'series-1', r = 4) {
       const node = el('circle', { cx: sx(x), cy: sy(y), r, class: `plane__dot ${className}` });
