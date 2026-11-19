@@ -194,6 +194,8 @@ code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surfa
 .box--satz, .box--lemma { --box-color: var(--box-satz); }
 .box--beispiel, .box--beobachtung { --box-color: var(--box-beispiel); }
 .box--merke { --box-color: var(--box-merke); }
+.box--algorithmus { --box-color: var(--box-definition); }
+.box--algorithmus ol { margin: 0.4rem 0; }
 .box--intuition { --box-color: var(--box-intuition); background: var(--surface-2); }
 
 details > summary { cursor: pointer; font-family: var(--font-ui); font-weight: 600; font-size: 0.92rem; color: var(--accent); }
@@ -340,6 +342,7 @@ details > summary { cursor: pointer; font-family: var(--font-ui); font-weight: 6
 .plot__line--dashed { stroke-dasharray: 5 4; stroke-width: 1.5; }
 .plot__point { fill: var(--series-color); }
 .plot__stem { stroke: var(--series-color); stroke-width: 1.5; opacity: 0.6; }
+.plot__area { fill: color-mix(in srgb, var(--series-color) 22%, transparent); stroke: var(--series-color); stroke-width: 1; stroke-opacity: 0.5; }
 .plot__marker { stroke: var(--text-muted); stroke-dasharray: 3 3; }
 .plot__marker-label { fill: var(--text-muted); font-size: 11px; }
 .plot__band { fill: var(--accent-soft); opacity: 0.6; }
@@ -349,6 +352,7 @@ details > summary { cursor: pointer; font-family: var(--font-ui); font-weight: 6
 .plot-legend li { display: inline-flex; align-items: center; gap: 0.4rem; }
 .plot-legend__swatch { display: inline-block; width: 18px; height: 3px; border-radius: 2px; background: var(--series-color); }
 .plot-legend__swatch--points, .plot-legend__swatch--stem { width: 8px; height: 8px; border-radius: 50%; }
+.plot-legend__swatch--area { width: 14px; height: 10px; border-radius: 2px; background: color-mix(in srgb, var(--series-color) 35%, transparent); }
 
 .series-1 { --series-color: var(--series-1); }
 .series-2 { --series-color: var(--series-2); }
@@ -454,3 +458,20 @@ details > summary { cursor: pointer; font-family: var(--font-ui); font-weight: 6
 .butterfly__label { font-family: var(--font-mono); font-size: 11px; fill: var(--text-muted); }
 .checkbox { display: inline-flex; align-items: center; gap: 0.2rem; font-size: 0.85rem; color: var(--text); margin-right: 0.5rem; }
 .checkbox input { accent-color: var(--accent); }
+
+/* Haar-Wavelets (VL 24) und Quadratur (VL 25) */
+.haar-tree__svg, .haar-map { width: 100%; height: auto; display: block; margin: 0.5rem 0; }
+.haar-tree__axis { stroke: var(--border); stroke-width: 1; }
+.haar-tree__edge { stroke: var(--text-muted); stroke-width: 0.8; opacity: 0.5; }
+.haar-tree__label { font-family: var(--font-mono); font-size: 11px; fill: var(--text); }
+.haar-tree__label--muted { fill: var(--text-muted); }
+.haar-tree__node { cursor: pointer; outline: none; }
+.haar-tree__hit { fill: transparent; }
+.haar-tree__node:hover .haar-tree__hit, .haar-tree__node:focus-visible .haar-tree__hit { fill: var(--surface-2); }
+.haar-tree__graph { fill: none; stroke: var(--series-3); stroke-width: 1.8; }
+.haar-tree__node--active .haar-tree__hit { fill: var(--accent-soft); }
+.haar-tree__node--active .haar-tree__graph { stroke: var(--series-1); stroke-width: 2.6; }
+.haar-tree__node--child .haar-tree__graph { stroke: var(--series-4); stroke-width: 2.4; }
+.haar-map__cell { fill: var(--series-6); }
+.haar-map__cell--kept { fill: var(--series-2); }
+.row--negative td { color: var(--series-5); font-weight: 600; }

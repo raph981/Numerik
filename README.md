@@ -4,7 +4,7 @@ Interaktive Website zum Skript **„Einführung in die Numerik“** (P. Bastian,
 Die Inhalte werden Schritt für Schritt erklärt und durch Visualisierungen und Experimente ergänzt,
 die direkt im Browser nachrechnen.
 
-Aktuell aufbereitet:
+Alle 26 Vorlesungen sind aufbereitet:
 
 | Vorlesung | Inhalte | Interaktive Elemente |
 |---|---|---|
@@ -30,6 +30,10 @@ Aktuell aufbereitet:
 | 20 – Trigonometrische Interpolation | Einheitswurzeln, DFT, reelle Koeffizienten, Gibbs-Phänomen, FFT, Spektralanalyse | Einheitswurzeln, trigonometrische Interpolation mit Spektrum, FFT-Schmetterling mit Laufzeitmessung, Tiefpassfilter |
 | 21 – Splines | Spline-Räume, kubische Splines (tridiagonales System), Fehler und Konvergenzordnung | Polynom vs. lineare/kubische Splines (Beispiel 21.5), Konvergenzordnungen (Beispiel 21.7) |
 | 22 – Bernstein-Polynome und Bézier-Kurven | Bernstein-Basis, Approximationssatz, Bézier-Kurven, konvexe Hülle, de Casteljau | Bernstein-Basis und -Approximation, Bézier-Editor mit de-Casteljau-Konstruktion |
+| 23 – Approximation in Skalarprodukträumen | Prähilberträume, Gauß-Approximation, orthogonale Projektion, Orthonormalbasen (Fourier, Legendre), Parseval, Fehlerkontrolle | Bestapproximation als Lot im ℝ², Gauß-Approximation in drei Basen mit Kondition der Gramschen Matrix und TOL-Steuerung |
+| 24 – Adaptive Approximation mit Haar-Wavelets | Träger, Haar-Wavelets, Baumstruktur, Basistransformation in O(2ᵏ), adaptive Kompression | Wavelet-Baum zum Anklicken, adaptive Kompression mit Koeffizientenkarte vs. uniforme Verfeinerung |
+| 25 – Numerische Integration niedriger Ordnung | Newton-Cotes (offen/abgeschlossen), negative Gewichte, Restglieder, Ordnung, summierte Formeln, EOC, Fehlerschätzung | Newton-Cotes mit Gewichtstabelle, Beispiel 25.8 mit Skript-Tabellen und Fehlerplot, Algorithmus 25.10 |
+| 26 – Numerische Integration hoher Ordnung | Euler-MacLaurin, Romberg, Gauß-Quadratur, adaptive Quadratur nach Archimedes, mehrdimensionale Quadratur, Monte Carlo | Romberg-Tableau mit Extrapolation in h², Legendre-Nullstellen und Exaktheitsgrad, Archimedes-Dreiecke, Verfahrensvergleich (Beispiel 26.7), Fluch der Dimension |
 
 ## Starten
 
@@ -53,8 +57,9 @@ npm test
 
 Die Tests prüfen u. a., dass die Tabellen aus Beispiel 2.1, die Mengen aus Beispiel 2.3, die Rundungen
 aus Beispiel 2.5, die Schranken aus Lemma 2.7, die Konditionszahl aus Beispiel 6.3 und die Elimination aus
-Beispiel 7.4, die Konditionszahlen aus Beispiel 8.6 und das Rechnen in F(10, 4) aus Beispiel 9.8 sowie die Iterationszahlen aus
-den Beispielen 16.1/16.10 exakt reproduziert werden.
+Beispiel 7.4, die Konditionszahlen aus Beispiel 8.6 und das Rechnen in F(10, 4) aus Beispiel 9.8, die Iterationszahlen aus
+den Beispielen 16.1/16.10 sowie die Quadraturtabellen aus den Beispielen 25.8 und 26.7 (Trapez, Simpson, Gauss4/6, Archimedes)
+exakt reproduziert werden.
 
 ## Aufbau
 

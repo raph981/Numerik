@@ -84,4 +84,20 @@ export const WIDGETS = {
   // Vorlesung 22
   'bernstein': () => import('./bernstein.js'),
   'bezier': () => import('./bezier.js'),
+  // Vorlesung 23
+  'projection': () => import('./projection.js'),
+  'gauss-approximation': () => import('./gauss-approximation.js'),
+  // Vorlesung 24
+  'haar-basis': () => import('./haar-basis.js'),
+  'haar-compression': () => import('./haar-compression.js'),
+  // Vorlesung 25
+  'newton-cotes': () => import('./newton-cotes.js'),
+  'composite-quadrature': () => import('./composite-quadrature.js'),
+  'quadrature-error-control': () => import('./quadrature-error-control.js'),
+  // Vorlesung 26
+  'romberg': () => import('./romberg.js'),
+  'gauss-quadrature': () => import('./gauss-quadrature.js'),
+  'archimedes': () => import('./archimedes.js'),
+  'quadrature-comparison': () => import('./quadrature-comparison.js'),
+  'monte-carlo': () => import('./monte-carlo.js'),
 };

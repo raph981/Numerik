@@ -54,13 +54,14 @@ function renderHome() {
           <span class="lecture-card__summary">${l.summary}</span>
         </a>`).join('')}
     </section>
+    ${PLANNED_CHAPTERS.length === 0 ? '' : `
     <section class="planned">
       <h2>Weitere Kapitel des Skripts</h2>
       <p>Folgende Vorlesungen sind noch nicht aufbereitet:</p>
       <ol start="${LECTURES.length + 1}" class="planned__list">
         ${PLANNED_CHAPTERS.map((t) => `<li>${t}</li>`).join('')}
       </ol>
-    </section>`;
+    </section>`}`;
   renderMath(main);
 }
 

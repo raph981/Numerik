@@ -14,7 +14,7 @@
  *
  * @typedef {Object} Series
  * @property {[number, number][]} data
- * @property {'line'|'points'|'stem'} [kind]
+ * @property {'line'|'points'|'stem'|'area'} [kind]  'area': Fläche zwischen Kurve und y = 0
  * @property {number} [color]        Index 1…6
  * @property {string} [label]
  * @property {boolean} [dashed]
@@ -195,6 +195,10 @@ export function renderPlot(container, config) {
     if (kind === 'line') {
       const d = pts.map(([x, y], k) => `${k ? 'L' : 'M'}${x.toFixed(2)},${y.toFixed(2)}`).join('');
       dataLayer.append(svg('path', { d, class: `plot__line ${cls}${s.dashed ? ' plot__line--dashed' : ''}` }));
+    } else if (kind === 'area') {
+      const base = yAxis.log ? innerH : Math.min(innerH, Math.max(0, sy(0)));
+      const d = `M${pts[0][0].toFixed(2)},${base.toFixed(2)}${pts.map(([x, y]) => `L${x.toFixed(2)},${y.toFixed(2)}`).join('')}L${pts.at(-1)[0].toFixed(2)},${base.toFixed(2)}Z`;
+      dataLayer.append(svg('path', { d, class: `plot__area ${cls}` }));
     } else if (kind === 'stem') {
       const base = yAxis.log ? innerH : sy(0);
       for (const [x, y] of pts) dataLayer.append(svg('line', { x1: x, x2: x, y1: base, y2: y, class: `plot__stem ${cls}` }));

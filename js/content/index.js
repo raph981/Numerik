@@ -40,6 +40,10 @@ import vl19 from './vl19.js';
 import vl20 from './vl20.js';
 import vl21 from './vl21.js';
 import vl22 from './vl22.js';
+import vl23 from './vl23.js';
+import vl24 from './vl24.js';
+import vl25 from './vl25.js';
+import vl26 from './vl26.js';
 
 /** @type {Lecture[]} */
 export const LECTURES = [
@@ -47,15 +51,11 @@ export const LECTURES = [
   vl08, vl09, vl10, vl11, vl12, vl13, vl14,
   vl15, vl16, vl17, vl18,
   vl19, vl20, vl21, vl22,
+  vl23, vl24, vl25, vl26,
 ];
 
-/** Noch nicht aufbereitete Kapitel des Skripts (in Reihenfolge). */
-export const PLANNED_CHAPTERS = [
-  'Approximation in Skalarprodukträumen',
-  'Adaptive Approximation mit Haar-Wavelets',
-  'Numerische Integration niedriger Ordnung',
-  'Numerische Integration hoher Ordnung',
-];
+/** Noch nicht aufbereitete Kapitel des Skripts (in Reihenfolge). Alle Kapitel sind aufbereitet. */
+export const PLANNED_CHAPTERS = [];
 
 /** @returns {Lecture | undefined} */
 export function findLecture(id) {

@@ -19,6 +19,7 @@ const BOX_KINDS = {
   beispiel: 'Beispiel',
   beobachtung: 'Beobachtung',
   merke: 'Merke',
+  algorithmus: 'Algorithmus',
   intuition: 'Anschaulich',
 };
 
